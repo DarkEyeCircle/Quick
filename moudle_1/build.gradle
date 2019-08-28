@@ -1,0 +1,7 @@
+apply from:"../component_build.gradle"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(":base:common-core-library")
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+}
