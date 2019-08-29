@@ -12,6 +12,8 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+        //启用Multidex
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -92,9 +94,21 @@ dependencies {
     api rootProject.ext.dependencies.XPopup
 
     //ActivitySlide
-    api(rootProject.ext.dependencies.slide)
+    api rootProject.ext.dependencies.slide
 
     //qmui
-    api(rootProject.ext.dependencies.qmui)
+    api rootProject.ext.dependencies.qmui
 
+    //skin-换肤
+    api rootProject.ext.dependencies.skin
+    api rootProject.ext.dependencies.skinAppcompat
+    api rootProject.ext.dependencies.skinDesign
+    api rootProject.ext.dependencies.skinCardview
+    api rootProject.ext.dependencies.skinConstraintLayout
+
+    //utils
+    api rootProject.ext.dependencies.utilcodex
+
+    //64k
+    api rootProject.ext.dependencies.multidex
 }

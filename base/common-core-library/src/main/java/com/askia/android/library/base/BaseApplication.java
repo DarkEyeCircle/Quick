@@ -2,9 +2,12 @@ package com.askia.android.library.base;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.multidex.MultiDex;
+import androidx.multidex.MultiDexApplication;
 
 import com.askia.android.library.utils.Utils;
 
@@ -12,13 +15,19 @@ import com.askia.android.library.utils.Utils;
 /**
  * BaseApplication
  */
-public class BaseApplication extends Application {
+public class BaseApplication extends MultiDexApplication {
     private static Application sInstance;
 
     @Override
     public void onCreate() {
         super.onCreate();
         setApplication(this);
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 
     /**

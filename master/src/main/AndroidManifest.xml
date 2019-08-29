@@ -3,6 +3,7 @@
     package="com.askia.app.android">
 
     <application
+        android:name="com.askia.android.library.base.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/core_library_app_name"

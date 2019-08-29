@@ -99,6 +99,19 @@ ext {
 
             //ActivitySlide
             "slide"                               : 'com.r0adkll:slidableactivity:2.1.0',
+
+            //skin-换肤
+            "skin"                                : 'skin.support:skin-support:4.0.3',                   // skin-support
+            "skinAppcompat"                       : 'skin.support:skin-support-appcompat:4.0.3',         // skin-support 基础控件支持
+            "skinDesign"                          : 'skin.support:skin-support-design:4.0.3',            // skin-support-design material design 控件支持[可选]
+            "skinCardview"                        : 'skin.support:skin-support-cardview:4.0.3',          // skin-support-cardview CardView 控件支持[可选]
+            "skinConstraintLayout"                : 'skin.support:skin-support-constraint-layout:4.0.3', // skin-support-constraint-layout ConstraintLayout 控件支持[可选]
+
+            //utils
+            "utilcodex"                           : 'com.blankj:utilcodex:1.25.9',
+
+            //64K
+            "multidex"                            : "androidx.multidex:multidex:2.0.0",
     ]
 }
 
