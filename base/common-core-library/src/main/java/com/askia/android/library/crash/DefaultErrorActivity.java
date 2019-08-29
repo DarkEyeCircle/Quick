@@ -63,7 +63,7 @@ public final class DefaultErrorActivity extends AppCompatActivity {
         final CaocConfig config = CustomActivityOnCrash.getConfigFromIntent(getIntent());
 
         if (config.isShowRestartButton() && config.getRestartActivityClass() != null) {
-            restartButton.setText(R.string.customactivityoncrash_error_activity_restart_app);
+            restartButton.setText(R.string.core_library_customactivityoncrash_error_activity_restart_app);
             restartButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -88,20 +88,20 @@ public final class DefaultErrorActivity extends AppCompatActivity {
                     //We retrieve all the error data and show it
 
                     AlertDialog dialog = new AlertDialog.Builder(DefaultErrorActivity.this)
-                            .setTitle(R.string.customactivityoncrash_error_activity_error_details_title)
+                            .setTitle(R.string.core_library_customactivityoncrash_error_activity_error_details_title)
                             .setMessage(CustomActivityOnCrash.getAllErrorDetailsFromIntent(DefaultErrorActivity.this, getIntent()))
-                            .setPositiveButton(R.string.customactivityoncrash_error_activity_error_details_close, null)
-                            .setNeutralButton(R.string.customactivityoncrash_error_activity_error_details_copy,
+                            .setPositiveButton(R.string.core_library_customactivityoncrash_error_activity_error_details_close, null)
+                            .setNeutralButton(R.string.core_library_customactivityoncrash_error_activity_error_details_copy,
                                     new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             copyErrorToClipboard();
-                                            Toast.makeText(DefaultErrorActivity.this, R.string.customactivityoncrash_error_activity_error_details_copied, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(DefaultErrorActivity.this, R.string.core_library_customactivityoncrash_error_activity_error_details_copied, Toast.LENGTH_SHORT).show();
                                         }
                                     })
                             .show();
                     TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-                    textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.customactivityoncrash_error_activity_error_details_text_size));
+                    textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.core_library_customactivityoncrash_error_activity_error_details_text_size));
                 }
             });
         } else {
@@ -120,7 +120,7 @@ public final class DefaultErrorActivity extends AppCompatActivity {
         String errorInformation = CustomActivityOnCrash.getAllErrorDetailsFromIntent(DefaultErrorActivity.this, getIntent());
 
         ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText(getString(R.string.customactivityoncrash_error_activity_error_details_clipboard_label), errorInformation);
+        ClipData clip = ClipData.newPlainText(getString(R.string.core_library_customactivityoncrash_error_activity_error_details_clipboard_label), errorInformation);
         clipboard.setPrimaryClip(clip);
     }
 }

@@ -29,13 +29,13 @@ public class MaterialDialogUtils {
                 .content(content)
                 .positiveText("agree")
                 .negativeText("disagree")
-                .positiveColorRes(R.color.white)
-                .negativeColorRes(R.color.white)
+                .positiveColorRes(R.color.core_library_white)
+                .negativeColorRes(R.color.core_library_white)
                 .titleGravity(GravityEnum.CENTER)
-                .titleColorRes(R.color.white)
+                .titleColorRes(R.color.core_library_white)
                 .contentColorRes(android.R.color.white)
                 .backgroundColorRes(R.color.material_blue_grey_800)
-                .dividerColorRes(R.color.white)
+                .dividerColorRes(R.color.core_library_white)
                 .btnSelector(R.drawable.md_selector, DialogAction.POSITIVE)
                 .positiveColor(Color.WHITE)
                 .negativeColorAttr(android.R.attr.textColorSecondaryInverse)
@@ -83,7 +83,7 @@ public class MaterialDialogUtils {
                 .progress(true, 0)
                 .progressIndeterminateStyle(horizontal)
                 .canceledOnTouchOutside(false)
-                .backgroundColorRes(R.color.white)
+                .backgroundColorRes(R.color.core_library_white)
                 .keyListener(new DialogInterface.OnKeyListener() {
                     @Override
                     public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
