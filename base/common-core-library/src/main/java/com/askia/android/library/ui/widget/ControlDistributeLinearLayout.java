@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 import com.askia.android.library.R;
 
 /**
- * Created by goldze on 2017/3/16.
  * 控制事件分发的LinearLayout
  */
 public class ControlDistributeLinearLayout extends LinearLayout {

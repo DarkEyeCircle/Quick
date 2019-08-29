@@ -21,7 +21,6 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created by goldze on 2017/5/14.
  * 转换相关工具类
  */
 public final class ConvertUtils {

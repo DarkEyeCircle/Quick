@@ -4,8 +4,6 @@ package com.askia.android.library.base;
 import androidx.annotation.NonNull;
 
 /**
- * Create Author：goldze
- * Create Date：2019/01/25
  * Description：RecycleView多布局ItemViewModel是封装
  */
 

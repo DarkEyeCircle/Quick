@@ -8,9 +8,6 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 
-/**
- * Created by goldze on 2017/5/10.
- */
 public class BaseInterceptor implements Interceptor {
     private Map<String, String> headers;
 

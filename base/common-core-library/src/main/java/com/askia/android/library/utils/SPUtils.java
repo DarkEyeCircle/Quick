@@ -10,10 +10,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by goldze on 2017/5/14.
- * SharedPreferences工具类
- */
 public final class SPUtils {
 
     private static Map<String, SPUtils> sSPMap = new HashMap<>();

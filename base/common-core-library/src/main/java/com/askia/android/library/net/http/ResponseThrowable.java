@@ -1,8 +1,5 @@
 package com.askia.android.library.net.http;
 
-/**
- * Created by goldze on 2017/5/11.
- */
 
 public class ResponseThrowable extends Exception {
     public int code;

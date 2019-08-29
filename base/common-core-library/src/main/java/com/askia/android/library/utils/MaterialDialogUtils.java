@@ -19,9 +19,6 @@ import com.askia.android.library.R;
 import java.util.List;
 
 
-/**
- * Created by goldze on 2017/5/10.
- */
 
 public class MaterialDialogUtils {
 

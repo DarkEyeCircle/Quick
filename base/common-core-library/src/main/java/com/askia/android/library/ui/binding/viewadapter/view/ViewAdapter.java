@@ -11,9 +11,6 @@ import java.util.concurrent.TimeUnit;
 
 import io.reactivex.functions.Consumer;
 
-/**
- * Created by goldze on 2017/6/16.
- */
 
 public class ViewAdapter {
     //防重复点击间隔(秒)

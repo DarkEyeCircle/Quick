@@ -8,9 +8,6 @@ import androidx.databinding.BindingAdapter;
 
 import com.askia.android.library.ui.binding.command.BindingCommand;
 
-/**
- * Created by goldze on 2017/6/18.
- */
 public class ViewAdapter {
     @BindingAdapter(value = {"onCheckedChangedCommand"}, requireAll = false)
     public static void onCheckedChangedCommand(final RadioGroup radioGroup, final BindingCommand<String> bindingCommand) {

@@ -16,9 +16,6 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import okhttp3.ResponseBody;
 
-/**
- * Created by goldze on 2017/9/26 0026.
- */
 
 public abstract class ProgressCallBack<T> {
 

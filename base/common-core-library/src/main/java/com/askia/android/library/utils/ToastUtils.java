@@ -20,7 +20,6 @@ import androidx.annotation.StringRes;
 import java.lang.ref.WeakReference;
 
 /**
- * Created by goldze on 2017/5/14.
  * 吐司工具类
  */
 public final class ToastUtils {

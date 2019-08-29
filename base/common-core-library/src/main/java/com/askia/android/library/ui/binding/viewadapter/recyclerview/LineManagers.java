@@ -3,9 +3,6 @@ package com.askia.android.library.ui.binding.viewadapter.recyclerview;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-/**
- * Created by goldze on 2017/6/16.
- */
 public class LineManagers {
     protected LineManagers() {
     }

@@ -13,9 +13,6 @@ import okhttp3.FormBody;
 import okhttp3.Request;
 import okio.Buffer;
 
-/**
- * @author ihsan on 09/02/2017.
- */
 
 class Printer {
 

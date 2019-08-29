@@ -18,10 +18,6 @@ import retrofit2.http.GET;
 import retrofit2.http.Streaming;
 import retrofit2.http.Url;
 
-/**
- * Created by goldze on 2017/5/11.
- * 文件下载管理，封装一行代码实现下载
- */
 
 public class DownLoadManager {
     private static DownLoadManager instance;

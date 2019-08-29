@@ -10,9 +10,8 @@ import com.askia.android.library.utils.Utils;
 
 
 /**
- * Created by goldze on 2017/6/15.
+ * BaseApplication
  */
-
 public class BaseApplication extends Application {
     private static Application sInstance;
 

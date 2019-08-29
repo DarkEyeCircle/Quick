@@ -7,14 +7,12 @@ import androidx.fragment.app.Fragment;
 import java.util.Stack;
 
 /**
- * Created by goldze on 2017/6/15.
  * activity堆栈式管理
  */
 public class AppManager {
 
     private static Stack<Activity> activityStack;
     private static Stack<Fragment> fragmentStack;
-    private static AppManager instance;
 
     private AppManager() {
     }
@@ -25,10 +23,11 @@ public class AppManager {
      * @return AppManager
      */
     public static AppManager getAppManager() {
-        if (instance == null) {
-            instance = new AppManager();
-        }
-        return instance;
+        return SingletonInstance.INSTANCE;
+    }
+
+    private static class SingletonInstance {
+        private static final AppManager INSTANCE = new AppManager();
     }
 
     public static Stack<Activity> getActivityStack() {
@@ -123,8 +122,6 @@ public class AppManager {
 
     /**
      * 获取指定的Activity
-     *
-     * @author kymjs
      */
     public Activity getActivity(Class<?> cls) {
         if (activityStack != null)

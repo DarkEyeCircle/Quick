@@ -1,7 +1,6 @@
 package com.askia.android.library.utils.constant;
 
 /**
- * Created by goldze on 2017/5/14.
  * 正则相关常量
  */
 public final class RegexConstants {
