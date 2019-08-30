@@ -10,7 +10,7 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
 import com.askia.android.library.ui.bus.event.SingleLiveEvent;
-import com.trello.rxlifecycle2.LifecycleProvider;
+import com.trello.rxlifecycle3.LifecycleProvider;
 
 import java.lang.ref.WeakReference;
 import java.util.HashMap;

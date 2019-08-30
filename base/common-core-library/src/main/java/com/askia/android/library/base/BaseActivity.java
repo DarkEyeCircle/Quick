@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.askia.android.library.ui.bus.Messenger;
 import com.askia.android.library.utils.MaterialDialogUtils;
-import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
+import com.trello.rxlifecycle3.components.support.RxAppCompatActivity;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

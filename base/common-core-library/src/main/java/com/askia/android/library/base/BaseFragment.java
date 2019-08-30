@@ -18,7 +18,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.askia.android.library.base.BaseViewModel.ParameterField;
 import com.askia.android.library.ui.bus.Messenger;
 import com.askia.android.library.utils.MaterialDialogUtils;
-import com.trello.rxlifecycle2.components.support.RxFragment;
+import com.trello.rxlifecycle3.components.support.RxFragment;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

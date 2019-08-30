@@ -47,6 +47,9 @@ dependencies {
     testImplementation rootProject.ext.test.juint
     androidTestImplementation rootProject.ext.test.testRunner
     androidTestImplementation rootProject.ext.test.testEspresso
+    //dagger apt
+    annotationProcessor rootProject.ext.dependencies.dagger2Compiler
+    annotationProcessor rootProject.ext.dependencies.dagger2AndroidProcessor
     //moudle
     if (!isBuildModule.toBoolean()) {
         //在宿主 App 中使用 implementation 依赖业务组件, 业务组件的代码就会完全暴露给宿主 App, 不利于代码的隔离

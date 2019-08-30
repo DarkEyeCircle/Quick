@@ -6,8 +6,8 @@ import androidx.fragment.app.Fragment;
 
 import com.askia.android.library.net.http.BaseResponse;
 import com.askia.android.library.net.http.ExceptionHandle;
-import com.trello.rxlifecycle2.LifecycleProvider;
-import com.trello.rxlifecycle2.LifecycleTransformer;
+import com.trello.rxlifecycle3.LifecycleProvider;
+import com.trello.rxlifecycle3.LifecycleTransformer;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
