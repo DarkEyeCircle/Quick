@@ -1,0 +1,50 @@
+package com.askia.android.moudle.demo.data.source.local;
+
+import com.askia.android.library.utils.SPUtils;
+import com.askia.android.moudle.demo.data.source.LocalDataSource;
+
+/**
+ * 本地数据源，可配合Room框架使用
+ */
+public class LocalDataSourceImpl implements LocalDataSource {
+    private volatile static LocalDataSourceImpl INSTANCE = null;
+
+    public static LocalDataSourceImpl getInstance() {
+        if (INSTANCE == null) {
+            synchronized (LocalDataSourceImpl.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new LocalDataSourceImpl();
+                }
+            }
+        }
+        return INSTANCE;
+    }
+
+    public static void destroyInstance() {
+        INSTANCE = null;
+    }
+
+    private LocalDataSourceImpl() {
+        //数据库Helper构建
+    }
+
+    @Override
+    public void saveUserName(String userName) {
+        SPUtils.getInstance().put("UserName", userName);
+    }
+
+    @Override
+    public void savePassword(String password) {
+        SPUtils.getInstance().put("password", password);
+    }
+
+    @Override
+    public String getUserName() {
+        return SPUtils.getInstance().getString("UserName");
+    }
+
+    @Override
+    public String getPassword() {
+        return SPUtils.getInstance().getString("password");
+    }
+}

@@ -23,8 +23,7 @@ ext {
             "testEspresso" : 'androidx.test.espresso:espresso-core:3.2.0',
             "mockitoCcore" : "org.mockito:mockito-core:1.+",
             "timber"       : "com.jakewharton.timber:timber:4.7.1",
-            "canaryDebug"  : "com.squareup.leakcanary:leakcanary-android:1.5.4",
-            "canaryRelease": "com.squareup.leakcanary:leakcanary-android-no-op:1.5.4",
+            "canaryDebug"  : "com.squareup.leakcanary:leakcanary-android:2.0-beta-3",
     ]
 
     //依赖第三方配置
@@ -55,10 +54,10 @@ ext {
             "adapterRxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
 
             //dagger
-            "dagger2"                             : "com.google.dagger:dagger:2.24",
-            "dagger2Android"                     : "com.google.dagger:dagger-android:2.24",
-            "dagger2Compiler"                    : "com.google.dagger:dagger-compiler:2.24",
-            "dagger2AndroidProcessor"           : "com.google.dagger:dagger-android-processor:2.24",
+//            "dagger2"                             : "com.google.dagger:dagger:2.24",
+//            "dagger2Android"                     : "com.google.dagger:dagger-android:2.24",
+//            "dagger2Compiler"                    : "com.google.dagger:dagger-compiler:2.24",
+//            "dagger2AndroidProcessor"           : "com.google.dagger:dagger-android-processor:2.24",
 
             //glide图片加载
             "glide"                               : "com.github.bumptech.glide:glide:4.9.0",
@@ -72,8 +71,8 @@ ext {
             "materialDialogsCommons"              : "com.afollestad.material-dialogs:commons:0.9.4.5",
 
             //recyclerview的databinding套装
-            "bindingcollectionadapter"            : "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.2.0",
-            "bindingcollectionadapterRecyclerview": "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.2.0",
+            "bindingcollectionadapter"            : "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:3.1.1",
+            "bindingcollectionadapterRecyclerview": "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:3.1.1",
 
             //屏幕适配
             "autosize"                            : "me.jessyan:autosize:1.1.1",

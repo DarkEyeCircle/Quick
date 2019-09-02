@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.askia.android.moudle.demo">
+
+    <application>
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.main.DemoActivity" />
+        <activity android:name=".ui.tab_bar.activity.TabBarActivity" />
+        <activity android:name=".ui.viewpager.activity.ViewPagerActivity" />
+    </application>
+
+</manifest>

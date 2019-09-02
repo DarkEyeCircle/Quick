@@ -1,1 +1,1 @@
-include ':master', ':moudle_1', ':base:common-core-library'
+include ':master', ':moudle_1', ':base:common-core-library', ':demo'

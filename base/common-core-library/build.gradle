@@ -65,12 +65,6 @@ dependencies {
     api rootProject.ext.dependencies.converterGson
     api rootProject.ext.dependencies.adapterRxjava
 
-    //dagger
-    api rootProject.ext.dependencies.dagger2
-    api rootProject.ext.dependencies.dagger2Android
-    annotationProcessor rootProject.ext.dependencies.dagger2Compiler
-    annotationProcessor rootProject.ext.dependencies.dagger2AndroidProcessor
-
     //json解析
     api rootProject.ext.dependencies.gson
 

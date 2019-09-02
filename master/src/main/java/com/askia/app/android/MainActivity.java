@@ -2,13 +2,19 @@ package com.askia.app.android;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.askia.android.library.base.BaseActivity;
+import com.askia.app.android.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity<ActivityMainBinding, MainActivityViewModel> {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public int initContentView(Bundle savedInstanceState) {
+        return R.layout.activity_main;
     }
+
+    @Override
+    public int initVariableId() {
+        return BR.viewModel;
+    }
+
 }
