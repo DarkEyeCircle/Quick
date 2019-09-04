@@ -48,10 +48,10 @@ ext {
             "rxpermissions"                       : "com.github.tbruyelle:rxpermissions:0.10.2",
 
             //network
-            "okhttp"                              : "com.squareup.okhttp3:okhttp:1.1.0",
+            "okhttp"                              : "com.squareup.okhttp3:okhttp:3.14.0",
             "retrofit"                            : "com.squareup.retrofit2:retrofit:2.6.1",
-            "converterGson"                       : "com.squareup.retrofit2:converter-gson:2.4.0",
-            "adapterRxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+            "converterGson"                       : "com.squareup.retrofit2:converter-gson:2.6.1",
+            "adapterRxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.6.1",
 
             //dagger
 //            "dagger2"                             : "com.google.dagger:dagger:2.24",

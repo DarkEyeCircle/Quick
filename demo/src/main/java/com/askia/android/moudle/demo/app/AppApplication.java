@@ -15,7 +15,7 @@ public class AppApplication extends BaseApplication {
         //是否开启打印日志
         KLog.init(BuildConfig.DEBUG);
         //初始化全局异常崩溃
-        initCrash();
+       // initCrash();
         //内存泄漏检测
     }
 

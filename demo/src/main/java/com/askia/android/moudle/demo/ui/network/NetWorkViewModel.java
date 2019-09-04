@@ -12,6 +12,7 @@ import com.askia.android.library.net.http.ResponseThrowable;
 import com.askia.android.library.ui.binding.command.BindingAction;
 import com.askia.android.library.ui.binding.command.BindingCommand;
 import com.askia.android.library.ui.bus.event.SingleLiveEvent;
+import com.askia.android.library.utils.KLog;
 import com.askia.android.library.utils.RxUtils;
 import com.askia.android.library.utils.ToastUtils;
 import com.askia.android.moudle.demo.BR;
@@ -122,6 +123,8 @@ public class NetWorkViewModel extends BaseViewModel<DemoRepository> {
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(Throwable throwable) throws Exception {
+                        KLog.e("Askia","发生错误");
+                        throwable.printStackTrace();
                         //关闭对话框
                         dismissDialog();
                         //请求刷新完成收回
