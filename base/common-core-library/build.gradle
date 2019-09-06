@@ -86,6 +86,10 @@ dependencies {
     api rootProject.ext.dependencies.greenDao
     api rootProject.ext.dependencies.greenDaoUpgradeHelper
 
+    //autosize
+    api rootProject.ext.dependencies.autosize
+
+
     //statusBar
     api rootProject.ext.dependencies.immersionbar
     api rootProject.ext.dependencies.immersionbarFragment

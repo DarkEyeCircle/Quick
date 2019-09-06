@@ -75,7 +75,7 @@ ext {
             "bindingcollectionadapterRecyclerview": "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:3.1.1",
 
             //屏幕适配
-            "autosize"                            : "me.jessyan:autosize:1.1.1",
+            "autosize"                            : "me.jessyan:autosize:1.1.2",
 
             //Arouter
             "arouter"                             : "com.alibaba:arouter-api:1.4.1",

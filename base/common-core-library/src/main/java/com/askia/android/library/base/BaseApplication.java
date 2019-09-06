@@ -9,7 +9,19 @@ import androidx.annotation.NonNull;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
+import com.askia.android.library.crash.DefaultErrorActivity;
+import com.askia.android.library.utils.AutoSizeUtils;
+import com.askia.android.library.utils.KLog;
 import com.askia.android.library.utils.Utils;
+
+import java.util.Locale;
+
+import me.jessyan.autosize.AutoSize;
+import me.jessyan.autosize.AutoSizeConfig;
+import me.jessyan.autosize.external.ExternalAdaptInfo;
+import me.jessyan.autosize.external.ExternalAdaptManager;
+import me.jessyan.autosize.internal.CustomAdapt;
+import me.jessyan.autosize.onAdaptListener;
 
 
 /**
@@ -17,6 +29,16 @@ import com.askia.android.library.utils.Utils;
  */
 public class BaseApplication extends MultiDexApplication {
     private static Application sInstance;
+
+    /**
+     * 获得当前app运行的Application
+     */
+    public static Application getInstance() {
+        if (sInstance == null) {
+            throw new NullPointerException("please inherit BaseApplication or call setApplication.");
+        }
+        return sInstance;
+    }
 
     @Override
     public void onCreate() {
@@ -31,12 +53,12 @@ public class BaseApplication extends MultiDexApplication {
     }
 
     /**
-     * 当主工程没有继承BaseApplication时，可以使用setApplication方法初始化BaseApplication
-     *
      * @param application
      */
-    public static synchronized void setApplication(@NonNull Application application) {
+    private void setApplication(@NonNull Application application) {
         sInstance = application;
+        //初始化屏幕适配
+        AutoSizeUtils.init(application);
         //初始化工具类
         Utils.init(application);
         //注册监听每个activity的生命周期,便于堆栈式管理
@@ -74,13 +96,5 @@ public class BaseApplication extends MultiDexApplication {
         });
     }
 
-    /**
-     * 获得当前app运行的Application
-     */
-    public static Application getInstance() {
-        if (sInstance == null) {
-            throw new NullPointerException("please inherit BaseApplication or call setApplication.");
-        }
-        return sInstance;
-    }
+
 }
