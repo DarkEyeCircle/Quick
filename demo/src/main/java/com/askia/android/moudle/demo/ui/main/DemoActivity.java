@@ -9,7 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
 
 import com.askia.android.library.base.BaseActivity;
-import com.askia.android.library.base.BaseAdapterActivity;
 import com.askia.android.library.net.http.DownLoadManager;
 import com.askia.android.library.net.http.download.ProgressCallBack;
 import com.askia.android.library.utils.ToastUtils;
@@ -22,7 +21,7 @@ import io.reactivex.functions.Consumer;
 import okhttp3.ResponseBody;
 
 
-public class DemoActivity extends BaseAdapterActivity<ActivityDemoBinding, DemoViewModel> {
+public class DemoActivity extends BaseActivity<ActivityDemoBinding, DemoViewModel> {
     @Override
     public void initParam() {
         super.initParam();
@@ -37,6 +36,11 @@ public class DemoActivity extends BaseAdapterActivity<ActivityDemoBinding, DemoV
     @Override
     public int initVariableId() {
         return BR.viewModel;
+    }
+
+    @Override
+    public boolean openSlide() {
+        return false;
     }
 
     @Override

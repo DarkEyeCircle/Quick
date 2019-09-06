@@ -16,7 +16,7 @@ import me.jessyan.autosize.external.ExternalAdaptManager;
 import me.jessyan.autosize.internal.CustomAdapt;
 import me.jessyan.autosize.onAdaptListener;
 
-public class AutoSizeUtils {
+public final class AutoSizeUtils {
 
     private AutoSizeUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");

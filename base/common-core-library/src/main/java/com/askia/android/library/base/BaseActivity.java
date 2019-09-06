@@ -14,6 +14,8 @@ import androidx.lifecycle.ViewModelProviders;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.askia.android.library.ui.bus.Messenger;
 import com.askia.android.library.utils.MaterialDialogUtils;
+import com.gyf.immersionbar.ImmersionBar;
+import com.r0adkll.slidr.Slidr;
 import com.trello.rxlifecycle3.components.support.RxAppCompatActivity;
 
 import java.lang.reflect.ParameterizedType;
@@ -33,10 +35,15 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ImmersionBar.with(this).init();
         //页面接受的参数方法
         initParam();
         //私有的初始化Databinding和ViewModel方法
         initViewDataBinding(savedInstanceState);
+        //初始化侧滑返回
+        if (openSlide()) {
+            initSlide();
+        }
         //私有的ViewModel与View的契约事件回调逻辑
         registorUIChangeLiveDataCallBack();
         //页面数据初始化方法
@@ -45,6 +52,10 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         initViewObservable();
         //注册RxBus
         viewModel.registerRxBus();
+    }
+
+    private void initSlide() {
+        Slidr.attach(this);
     }
 
     @Override
@@ -231,6 +242,13 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
      * @return BR的id
      */
     public abstract int initVariableId();
+
+    /**
+     * 是否开启activity侧滑
+     *
+     * @return true;开启滑动 false:关闭滑动
+     */
+    public abstract boolean openSlide();
 
     /**
      * 初始化ViewModel

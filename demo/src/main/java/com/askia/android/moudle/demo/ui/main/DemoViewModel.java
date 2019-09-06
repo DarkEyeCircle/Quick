@@ -13,6 +13,7 @@ import com.askia.android.moudle.demo.entity.FormEntity;
 import com.askia.android.moudle.demo.ui.form.FormFragment;
 import com.askia.android.moudle.demo.ui.network.NetWorkFragment;
 import com.askia.android.moudle.demo.ui.rv_multi.MultiRecycleViewFragment;
+import com.askia.android.moudle.demo.ui.slide.SlideExampleActivity;
 import com.askia.android.moudle.demo.ui.tab_bar.activity.TabBarActivity;
 import com.askia.android.moudle.demo.ui.viewpager.activity.ViewPagerActivity;
 import com.askia.android.moudle.demo.ui.vp_frg.ViewPagerGroupFragment;
@@ -110,4 +111,13 @@ public class DemoViewModel extends BaseViewModel {
             loadUrlEvent.setValue("http://gdown.baidu.com/data/wisegame/a2cd8828b227b9f9/neihanduanzi_692.apk");
         }
     });
+
+    //Activity侧滑
+    public BindingCommand slideActivityClick = new BindingCommand(new BindingAction() {
+        @Override
+        public void call() {
+            startActivity(SlideExampleActivity.class);
+        }
+    });
+
 }

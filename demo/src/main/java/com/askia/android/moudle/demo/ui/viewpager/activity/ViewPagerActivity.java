@@ -31,6 +31,11 @@ public class ViewPagerActivity extends BaseActivity<FragmentViewpagerBinding, Vi
         return BR.viewModel;
     }
 
+    @Override
+    public boolean openSlide() {
+        return false;
+    }
+
 
     @Override
     public void initData() {

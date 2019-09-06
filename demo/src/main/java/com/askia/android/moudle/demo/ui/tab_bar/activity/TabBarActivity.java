@@ -40,6 +40,11 @@ public class TabBarActivity extends BaseActivity<ActivityTabBarBinding, BaseView
     }
 
     @Override
+    public boolean openSlide() {
+        return false;
+    }
+
+    @Override
     public void initData() {
         //初始化Fragment
         initFragment();

@@ -38,6 +38,7 @@
         <activity android:name=".ui.main.DemoActivity"></activity>
         <activity android:name=".ui.tab_bar.activity.TabBarActivity"></activity>
         <activity android:name=".ui.viewpager.activity.ViewPagerActivity"></activity>
+        <activity android:name=".ui.slide.SlideExampleActivity"></activity>
     </application>
 
 </manifest>

@@ -25,6 +25,10 @@
         <item name="core_library_app_primary_color">?attr/qmui_config_color_blue</item>
         <item name="core_library_app_content_bg_color">@color/qmui_config_color_white</item>
 
+        <!--Slide-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
     </style>
 
     <style name="CoreLibraryQDTextAppearanceListItemSmall">
