@@ -59,6 +59,11 @@ public class FormFragment extends BaseFragment<FragmentFormBinding, FormViewMode
     }
 
     @Override
+    public void configTitleLayout() {
+
+    }
+
+    @Override
     public void initViewObservable() {
         //监听日期选择
         viewModel.uc.showDateDialogObservable.addOnPropertyChangedCallback(new Observable.OnPropertyChangedCallback() {

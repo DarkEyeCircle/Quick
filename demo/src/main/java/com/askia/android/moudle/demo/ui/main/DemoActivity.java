@@ -4,12 +4,14 @@ import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
 
 import com.askia.android.library.base.AppConfig;
 import com.askia.android.library.base.BaseActivity;
+import com.askia.android.library.databinding.TitleLayoutBinding;
 import com.askia.android.library.net.http.DownLoadManager;
 import com.askia.android.library.net.http.download.ProgressCallBack;
 import com.askia.android.library.utils.ToastUtils;
@@ -23,6 +25,7 @@ import okhttp3.ResponseBody;
 
 
 public class DemoActivity extends BaseActivity<ActivityDemoBinding, DemoViewModel> {
+
     @Override
     public void initParam() {
         super.initParam();
@@ -33,6 +36,12 @@ public class DemoActivity extends BaseActivity<ActivityDemoBinding, DemoViewMode
     public int initContentView(Bundle savedInstanceState) {
         return R.layout.activity_demo;
     }
+
+    @Override
+    public TitleLayoutBinding initTitleView(ActivityDemoBinding binding) {
+        return binding.toolbar;
+    }
+
 
     @Override
     public int initVariableId() {
@@ -58,6 +67,18 @@ public class DemoActivity extends BaseActivity<ActivityDemoBinding, DemoViewMode
             @Override
             public void onChanged(@Nullable String url) {
                 downFile(url);
+            }
+        });
+    }
+
+    @Override
+    public void configTitleLayout() {
+        super.configTitleLayout();
+        topBar.setTitle("Demo");
+        topBar.addLeftBackImageButton().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

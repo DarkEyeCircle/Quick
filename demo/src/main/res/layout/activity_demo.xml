@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="ResourceName">
 
     <data>
@@ -11,15 +13,16 @@
             type="DemoViewModel" />
     </data>
 
-    <com.qmuiteam.qmui.layout.QMUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:binding="http://schemas.android.com/apk/res-auto"
+    <com.qmuiteam.qmui.layout.QMUILinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/holo_red_dark"
         android:orientation="vertical">
 
         <include
             android:id="@+id/toolbar"
-            layout="@layout/include_title_layout" />
+            layout="@layout/title_layout" />
+
 
         <Button
             android:layout_width="match_parent"

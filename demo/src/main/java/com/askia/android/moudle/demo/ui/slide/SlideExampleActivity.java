@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.askia.android.library.base.BaseActivity;
 import com.askia.android.library.base.BaseViewModel;
+import com.askia.android.library.databinding.TitleLayoutBinding;
 import com.askia.android.moudle.demo.BR;
 import com.askia.android.moudle.demo.R;
 import com.askia.android.moudle.demo.databinding.DemoActivitySlideBinding;
@@ -13,6 +14,11 @@ public class SlideExampleActivity extends BaseActivity<DemoActivitySlideBinding,
     @Override
     public int initContentView(Bundle savedInstanceState) {
         return R.layout.demo_activity_slide;
+    }
+
+    @Override
+    public TitleLayoutBinding initTitleView(DemoActivitySlideBinding binding) {
+        return null;
     }
 
     @Override

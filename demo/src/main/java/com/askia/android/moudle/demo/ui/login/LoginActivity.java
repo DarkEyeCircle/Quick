@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.askia.android.library.base.BaseActivity;
+import com.askia.android.library.databinding.TitleLayoutBinding;
 import com.askia.android.moudle.demo.BR;
 import com.askia.android.moudle.demo.R;
 import com.askia.android.moudle.demo.app.AppViewModelFactory;
@@ -22,6 +23,11 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
     @Override
     public int initContentView(Bundle savedInstanceState) {
         return R.layout.activity_login;
+    }
+
+    @Override
+    public TitleLayoutBinding initTitleView(ActivityLoginBinding binding) {
+        return null;
     }
 
     @Override

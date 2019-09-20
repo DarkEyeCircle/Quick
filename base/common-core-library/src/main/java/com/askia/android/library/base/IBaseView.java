@@ -1,6 +1,8 @@
 package com.askia.android.library.base;
 
 
+import com.qmuiteam.qmui.widget.QMUITopBar;
+
 public interface IBaseView {
     /**
      * 初始化界面传递参数
@@ -20,4 +22,10 @@ public interface IBaseView {
      * 初始化界面配置
      */
     AppConfig.Builder initAppConfig();
+
+
+    /**
+     * 配置标题栏
+     */
+    void configTitleLayout();
 }

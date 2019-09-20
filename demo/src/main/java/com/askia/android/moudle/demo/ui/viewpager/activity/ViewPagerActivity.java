@@ -6,6 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
 
 import com.askia.android.library.base.BaseActivity;
+import com.askia.android.library.databinding.TitleLayoutBinding;
 import com.askia.android.library.utils.ToastUtils;
 import com.askia.android.moudle.demo.BR;
 import com.askia.android.moudle.demo.R;
@@ -24,6 +25,11 @@ public class ViewPagerActivity extends BaseActivity<FragmentViewpagerBinding, Vi
     @Override
     public int initContentView(Bundle savedInstanceState) {
         return R.layout.fragment_viewpager;
+    }
+
+    @Override
+    public TitleLayoutBinding initTitleView(FragmentViewpagerBinding binding) {
+        return null;
     }
 
     @Override

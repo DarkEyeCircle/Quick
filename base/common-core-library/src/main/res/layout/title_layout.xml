@@ -4,10 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="ResourceName">
 
+    <data>
+
+        <import type="com.askia.android.library.base.BaseViewModel" />
+
+        <variable
+            name="viewModel"
+            type="BaseViewModel" />
+    </data>
+
     <com.qmuiteam.qmui.widget.QMUITopBar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="49dp">
 
     </com.qmuiteam.qmui.widget.QMUITopBar>
 </layout>

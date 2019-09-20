@@ -275,6 +275,11 @@ public abstract class BaseFragment<V extends ViewDataBinding, VM extends BaseVie
                 .create();
     }
 
+    @Override
+    public void configTitleLayout() {
+
+    }
+
     /**
      * 创建ViewModel
      *

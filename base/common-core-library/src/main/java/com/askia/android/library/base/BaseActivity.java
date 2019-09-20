@@ -12,10 +12,11 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.askia.android.library.R;
+import com.askia.android.library.databinding.TitleLayoutBinding;
 import com.askia.android.library.ui.bus.Messenger;
 import com.askia.android.library.utils.MaterialDialogUtils;
 import com.gyf.immersionbar.ImmersionBar;
+import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.r0adkll.slidr.Slidr;
 import com.trello.rxlifecycle3.components.support.RxAppCompatActivity;
 
@@ -31,6 +32,8 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     protected V binding;
     protected VM viewModel;
     private int viewModelId;
+    private TitleLayoutBinding titleLayoutBinding;
+    protected QMUITopBar topBar;
     private MaterialDialog dialog;
 
     @Override
@@ -41,14 +44,15 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         if (config.isOpenSlide()) {
             initSlide();
         }
-        //初始化沉浸式状态栏
-        if (config.isOpenImmersionBar()) {
-            ImmersionBar.with(this).titleBar(R.id.toolbar).init();
-        }
         //页面接受的参数方法
         initParam();
         //私有的初始化Databinding和ViewModel方法
         initViewDataBinding(savedInstanceState);
+        //初始化沉浸式状态栏
+        if (config.isOpenImmersionBar() && titleLayoutBinding != null) {
+            ImmersionBar.with(this).titleBar(topBar).init();
+        }
+        configTitleLayout();
         //私有的ViewModel与View的契约事件回调逻辑
         registorUIChangeLiveDataCallBack();
         //页面数据初始化方法
@@ -74,6 +78,9 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         if (binding != null) {
             binding.unbind();
         }
+        if (titleLayoutBinding != null) {
+            titleLayoutBinding.unbind();
+        }
     }
 
     /**
@@ -82,6 +89,7 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     private void initViewDataBinding(Bundle savedInstanceState) {
         //DataBindingUtil类需要在project的build中配置 dataBinding {enabled true }, 同步后会自动关联android.databinding包
         binding = DataBindingUtil.setContentView(this, initContentView(savedInstanceState));
+        titleLayoutBinding = initTitleView(binding);
         viewModelId = initVariableId();
         viewModel = initViewModel();
         if (viewModel == null) {
@@ -97,6 +105,11 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         }
         //关联ViewModel
         binding.setVariable(viewModelId, viewModel);
+        //标题栏关联viewModel
+        if (titleLayoutBinding != null) {
+            topBar = titleLayoutBinding.toolbar;
+            titleLayoutBinding.setViewModel(viewModel);
+        }
         //让ViewModel拥有View的生命周期感应
         getLifecycle().addObserver(viewModel);
         //注入RxLifecycle生命周期
@@ -242,6 +255,14 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     public abstract int initContentView(Bundle savedInstanceState);
 
     /**
+     * 初始化根布局
+     *
+     * @return 布局layout的id
+     */
+    public abstract TitleLayoutBinding initTitleView(V binding);
+
+
+    /**
      * 初始化ViewModel的id
      *
      * @return BR的id
@@ -276,6 +297,11 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
                 .create();
     }
 
+    @Override
+    public void configTitleLayout() {
+
+    }
+
     /**
      * 创建ViewModel
      *
@@ -286,6 +312,4 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     public <T extends ViewModel> T createViewModel(FragmentActivity activity, Class<T> cls) {
         return ViewModelProviders.of(activity).get(cls);
     }
-
-
 }

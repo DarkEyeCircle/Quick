@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.askia.android.library.base.BaseActivity;
 import com.askia.android.library.base.BaseViewModel;
+import com.askia.android.library.databinding.TitleLayoutBinding;
 import com.askia.android.moudle.demo.BR;
 import com.askia.android.moudle.demo.R;
 import com.askia.android.moudle.demo.databinding.ActivityTabBarBinding;
@@ -32,6 +33,11 @@ public class TabBarActivity extends BaseActivity<ActivityTabBarBinding, BaseView
     @Override
     public int initContentView(Bundle savedInstanceState) {
         return R.layout.activity_tab_bar;
+    }
+
+    @Override
+    public TitleLayoutBinding initTitleView(ActivityTabBarBinding binding) {
+        return null;
     }
 
     @Override
