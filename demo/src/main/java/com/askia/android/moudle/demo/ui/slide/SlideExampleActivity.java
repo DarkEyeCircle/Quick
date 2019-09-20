@@ -20,11 +20,6 @@ public class SlideExampleActivity extends BaseActivity<DemoActivitySlideBinding,
         return BR.viewModel;
     }
 
-    @Override
-    public boolean openSlide() {
-        return true;
-    }
-
 
     @Override
     public BaseViewModel initViewModel() {

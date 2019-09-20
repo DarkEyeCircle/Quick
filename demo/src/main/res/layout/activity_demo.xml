@@ -11,13 +11,15 @@
             type="DemoViewModel" />
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.qmuiteam.qmui.layout.QMUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:binding="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#202020"
-        android:fitsSystemWindows="true"
         android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/include_title_layout" />
 
         <Button
             android:layout_width="match_parent"
@@ -84,6 +86,5 @@
             android:layout_height="wrap_content"
             android:text="Activity侧滑返回"
             binding:onClickCommand="@{viewModel.slideActivityClick}" />
-
-    </LinearLayout>
+    </com.qmuiteam.qmui.layout.QMUILinearLayout>
 </layout>

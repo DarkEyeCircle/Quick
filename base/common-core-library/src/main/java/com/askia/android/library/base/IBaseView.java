@@ -15,4 +15,9 @@ public interface IBaseView {
      * 初始化界面观察者的监听
      */
     void initViewObservable();
+
+    /**
+     * 初始化界面配置
+     */
+    AppConfig.Builder initAppConfig();
 }

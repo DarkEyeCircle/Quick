@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
 
+import com.askia.android.library.base.AppConfig;
 import com.askia.android.library.base.BaseActivity;
 import com.askia.android.library.net.http.DownLoadManager;
 import com.askia.android.library.net.http.download.ProgressCallBack;
@@ -39,8 +40,8 @@ public class DemoActivity extends BaseActivity<ActivityDemoBinding, DemoViewMode
     }
 
     @Override
-    public boolean openSlide() {
-        return false;
+    public AppConfig.Builder initAppConfig() {
+        return super.initAppConfig().openImmersionBar(true);
     }
 
     @Override

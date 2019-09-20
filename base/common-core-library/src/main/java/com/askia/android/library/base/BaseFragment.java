@@ -268,6 +268,13 @@ public abstract class BaseFragment<V extends ViewDataBinding, VM extends BaseVie
         return false;
     }
 
+    @Override
+    public AppConfig.Builder initAppConfig() {
+        return AppConfig
+                .Builder
+                .create();
+    }
+
     /**
      * 创建ViewModel
      *

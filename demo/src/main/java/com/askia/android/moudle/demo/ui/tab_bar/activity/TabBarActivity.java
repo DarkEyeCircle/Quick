@@ -39,10 +39,6 @@ public class TabBarActivity extends BaseActivity<ActivityTabBarBinding, BaseView
         return BR.viewModel;
     }
 
-    @Override
-    public boolean openSlide() {
-        return false;
-    }
 
     @Override
     public void initData() {

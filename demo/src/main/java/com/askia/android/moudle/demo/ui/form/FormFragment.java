@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.Observable;
 import androidx.lifecycle.Observer;
 
+import com.askia.android.library.base.AppConfig;
 import com.askia.android.library.base.BaseFragment;
 import com.askia.android.library.utils.MaterialDialogUtils;
 import com.askia.android.moudle.demo.BR;
@@ -84,4 +85,5 @@ public class FormFragment extends BaseFragment<FragmentFormBinding, FormViewMode
             }
         });
     }
+
 }

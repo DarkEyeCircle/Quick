@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.askia.android.library.R;
 import com.askia.android.library.ui.bus.Messenger;
 import com.askia.android.library.utils.MaterialDialogUtils;
 import com.gyf.immersionbar.ImmersionBar;
@@ -35,15 +36,19 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ImmersionBar.with(this).init();
+        AppConfig config = initAppConfig().getConfig();
+        //初始化侧滑返回
+        if (config.isOpenSlide()) {
+            initSlide();
+        }
+        //初始化沉浸式状态栏
+        if (config.isOpenImmersionBar()) {
+            ImmersionBar.with(this).titleBar(R.id.toolbar).init();
+        }
         //页面接受的参数方法
         initParam();
         //私有的初始化Databinding和ViewModel方法
         initViewDataBinding(savedInstanceState);
-        //初始化侧滑返回
-        if (openSlide()) {
-            initSlide();
-        }
         //私有的ViewModel与View的契约事件回调逻辑
         registorUIChangeLiveDataCallBack();
         //页面数据初始化方法
@@ -243,12 +248,6 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
      */
     public abstract int initVariableId();
 
-    /**
-     * 是否开启activity侧滑
-     *
-     * @return true;开启滑动 false:关闭滑动
-     */
-    public abstract boolean openSlide();
 
     /**
      * 初始化ViewModel
@@ -259,6 +258,7 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         return null;
     }
 
+
     @Override
     public void initData() {
 
@@ -267,6 +267,13 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     @Override
     public void initViewObservable() {
 
+    }
+
+    @Override
+    public AppConfig.Builder initAppConfig() {
+        return AppConfig
+                .Builder
+                .create();
     }
 
     /**
@@ -279,4 +286,6 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     public <T extends ViewModel> T createViewModel(FragmentActivity activity, Class<T> cls) {
         return ViewModelProviders.of(activity).get(cls);
     }
+
+
 }
