@@ -75,12 +75,6 @@ public class DemoActivity extends BaseActivity<ActivityDemoBinding, DemoViewMode
     public void configTitleLayout() {
         super.configTitleLayout();
         topBar.setTitle("Demo");
-        topBar.addLeftBackImageButton().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
     }
 
     /**

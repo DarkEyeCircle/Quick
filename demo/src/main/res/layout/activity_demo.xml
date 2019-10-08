@@ -13,7 +13,7 @@
             type="DemoViewModel" />
     </data>
 
-    <com.qmuiteam.qmui.layout.QMUILinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/holo_red_dark"
@@ -89,5 +89,5 @@
             android:layout_height="wrap_content"
             android:text="Activity侧滑返回"
             binding:onClickCommand="@{viewModel.slideActivityClick}" />
-    </com.qmuiteam.qmui.layout.QMUILinearLayout>
+    </LinearLayout>
 </layout>

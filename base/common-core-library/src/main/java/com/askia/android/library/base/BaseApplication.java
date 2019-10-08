@@ -9,10 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
+import com.askia.android.library.BuildConfig;
 import com.askia.android.library.crash.DefaultErrorActivity;
 import com.askia.android.library.utils.AutoSizeUtils;
 import com.askia.android.library.utils.KLog;
 import com.askia.android.library.utils.Utils;
+import com.xuexiang.xui.XUI;
 
 import java.util.Locale;
 
@@ -57,6 +59,9 @@ public class BaseApplication extends MultiDexApplication {
      */
     private void setApplication(@NonNull Application application) {
         sInstance = application;
+        //初始化UI框架
+        XUI.init(application);
+        XUI.debug(BuildConfig.DEBUG);
         //初始化屏幕适配
         AutoSizeUtils.init(application);
         //初始化工具类

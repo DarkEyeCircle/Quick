@@ -16,9 +16,9 @@ import com.askia.android.library.databinding.TitleLayoutBinding;
 import com.askia.android.library.ui.bus.Messenger;
 import com.askia.android.library.utils.MaterialDialogUtils;
 import com.gyf.immersionbar.ImmersionBar;
-import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.r0adkll.slidr.Slidr;
 import com.trello.rxlifecycle3.components.support.RxAppCompatActivity;
+import com.xuexiang.xui.widget.actionbar.TitleBar;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -33,7 +33,7 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     protected VM viewModel;
     private int viewModelId;
     private TitleLayoutBinding titleLayoutBinding;
-    protected QMUITopBar topBar;
+    protected TitleBar topBar;
     private MaterialDialog dialog;
 
     @Override

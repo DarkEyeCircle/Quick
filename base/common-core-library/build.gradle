@@ -36,6 +36,7 @@ dependencies {
 
     //androidX
     api rootProject.ext.androidx.androidxAppcompat
+    api rootProject.ext.androidx.recyclerview
 
     //Google LiveData和ViewModel组件
     api rootProject.ext.dependencies.lifecycleExtensions
@@ -100,8 +101,9 @@ dependencies {
     //ActivitySlide
     api rootProject.ext.dependencies.slide
 
-    //qmui
-    api rootProject.ext.dependencies.qmui
+    //XUI
+    api rootProject.ext.dependencies.xui
+    api rootProject.ext.dependencies.material
 
     //skin-换肤
     api rootProject.ext.dependencies.skin

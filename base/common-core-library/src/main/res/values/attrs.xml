@@ -1,6 +1,0 @@
-<resources>
-    <!-- topbar -->
-    <attr name="core_library_app_primary_color" format="color" />
-    <!-- content-->
-    <attr name="core_library_app_content_bg_color" format="color" />
-</resources>
