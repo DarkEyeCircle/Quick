@@ -94,6 +94,7 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         viewModelId = initVariableId();
         viewModel = initViewModel();
         if (viewModel == null) {
+            //根据泛型初始化ViewModel
             Class modelClass;
             Type type = getClass().getGenericSuperclass();
             if (type instanceof ParameterizedType) {
