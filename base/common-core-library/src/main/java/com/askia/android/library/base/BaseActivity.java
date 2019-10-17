@@ -50,7 +50,8 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         initViewDataBinding(savedInstanceState);
         //初始化沉浸式状态栏
         if (config.isOpenImmersionBar() && titleLayoutBinding != null) {
-            ImmersionBar.with(this).titleBar(topBar).init();
+            ImmersionBar.with(this).init();
+            titleLayoutBinding.toolbar.setImmersive(true);
         }
         configTitleLayout();
         //私有的ViewModel与View的契约事件回调逻辑
@@ -249,7 +250,9 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
 
     /**
      * 初始化根布局
+     * savedInstanceState
      *
+     * @param savedInstanceState Bundle
      * @return 布局layout的id
      */
     public abstract int initContentView(Bundle savedInstanceState);
@@ -305,9 +308,9 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     /**
      * 创建ViewModel
      *
-     * @param cls
-     * @param <T>
-     * @return
+     * @param cls cls
+     * @param <T> ViewModel
+     * @return ViewModel
      */
     public <T extends ViewModel> T createViewModel(FragmentActivity activity, Class<T> cls) {
         return ViewModelProviders.of(activity).get(cls);

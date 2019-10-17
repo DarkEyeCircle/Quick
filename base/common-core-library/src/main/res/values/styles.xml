@@ -5,7 +5,7 @@
         <!-- 自定义自己的主题样式 -->
         <item name="colorPrimary">@color/core_library_colorPrimary</item>
         <item name="colorPrimaryDark">@color/core_library_colorPrimaryDark</item>
-        <item name="colorAccent">@color/core_library_colorAccent</item>
+        <item name="colorAccent">@color/core_library_white</item>
 
         <!--Slide-->
         <item name="android:windowIsTranslucent">true</item>

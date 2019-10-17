@@ -4,10 +4,10 @@ import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.askia.android.library.base.AppConfig;
 import com.askia.android.library.base.BaseActivity;
@@ -17,6 +17,7 @@ import com.askia.android.library.net.http.download.ProgressCallBack;
 import com.askia.android.library.utils.ToastUtils;
 import com.askia.android.moudle.demo.BR;
 import com.askia.android.moudle.demo.R;
+import com.askia.android.moudle.demo.app.AppViewModelFactory;
 import com.askia.android.moudle.demo.databinding.ActivityDemoBinding;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
@@ -49,6 +50,11 @@ public class DemoActivity extends BaseActivity<ActivityDemoBinding, DemoViewMode
     }
 
     @Override
+    public DemoViewModel initViewModel() {
+        return super.initViewModel();
+    }
+
+    @Override
     public AppConfig.Builder initAppConfig() {
         return super.initAppConfig().openImmersionBar(true);
     }
@@ -74,7 +80,7 @@ public class DemoActivity extends BaseActivity<ActivityDemoBinding, DemoViewMode
     @Override
     public void configTitleLayout() {
         super.configTitleLayout();
-        topBar.setTitle("Demo");
+        topBar.setTitle("Demo").setLeftImageDrawable(null);
     }
 
     /**

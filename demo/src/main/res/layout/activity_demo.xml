@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:binding="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="ResourceName">
@@ -13,16 +14,19 @@
             type="DemoViewModel" />
     </data>
 
-    <LinearLayout
+    <com.xuexiang.xui.widget.layout.XUILinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_red_dark"
-        android:orientation="vertical">
+        android:layout_gravity="center_horizontal"
+        android:background="@color/xui_config_color_white"
+        android:orientation="vertical"
+        app:xui_borderColor="?attr/xui_config_color_separator_light"
+        app:xui_outerNormalColor="?attr/xui_config_color_background"
+        app:xui_showBorderOnlyBeforeL="true">
 
         <include
             android:id="@+id/toolbar"
             layout="@layout/title_layout" />
-
 
         <Button
             android:layout_width="match_parent"
@@ -89,5 +93,5 @@
             android:layout_height="wrap_content"
             android:text="Activity侧滑返回"
             binding:onClickCommand="@{viewModel.slideActivityClick}" />
-    </LinearLayout>
+    </com.xuexiang.xui.widget.layout.XUILinearLayout>
 </layout>
