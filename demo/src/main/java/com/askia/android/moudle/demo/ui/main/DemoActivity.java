@@ -7,7 +7,6 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.askia.android.library.base.AppConfig;
 import com.askia.android.library.base.BaseActivity;
@@ -17,7 +16,6 @@ import com.askia.android.library.net.http.download.ProgressCallBack;
 import com.askia.android.library.utils.ToastUtils;
 import com.askia.android.moudle.demo.BR;
 import com.askia.android.moudle.demo.R;
-import com.askia.android.moudle.demo.app.AppViewModelFactory;
 import com.askia.android.moudle.demo.databinding.ActivityDemoBinding;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 

@@ -19,11 +19,12 @@
         <import type="com.askia.android.library.ui.binding.viewadapter.recyclerview.LineManagers" />
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.xuexiang.xui.widget.layout.XUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:binding="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/core_library_white">
 
         <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
             android:id="@+id/twinklingRefreshLayout"
@@ -43,5 +44,5 @@
 
         </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
 
-    </LinearLayout>
+    </com.xuexiang.xui.widget.layout.XUILinearLayout>
 </layout>
